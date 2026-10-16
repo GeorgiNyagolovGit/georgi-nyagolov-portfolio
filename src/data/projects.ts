@@ -2,35 +2,23 @@ import type { Project } from '../types/Project'
 
 export const projects: Project[] = [
   {
-    title: 'TaskFlow',
+    title: 'E-Commerce Backend API',
     description:
-      'A focused task manager with drag-and-drop boards, smart filters and persistent local data. Built around a scalable component architecture.',
-    category: 'Frontend',
-    technologies: ['React', 'TypeScript', 'SCSS', 'Vite'],
-    liveUrl: '#',
-    repositoryUrl: '#',
+      'A deployment-ready REST API for an online store with JWT authentication, product catalog, shopping carts, order management, mock payments and role-based administration.',
+    category: 'Backend',
+    technologies: ['Java 17', 'Spring Boot', 'PostgreSQL', 'Gradle', 'Docker'],
+    repositoryUrl: 'https://github.com/GeorgiNyagolovGit/ecommerce-backend',
     accent: 'emerald',
     featured: true,
   },
   {
-    title: 'MovieScope',
+    title: 'Marketplace Frontend',
     description:
-      'Movie discovery app with search, genre filters, detail pages and a personal watchlist powered by a public REST API.',
+      'A responsive e-commerce storefront with product discovery, authentication, persistent cart, checkout, order history and a dedicated admin workspace.',
     category: 'Frontend',
-    technologies: ['React', 'REST API', 'CSS Modules'],
-    liveUrl: '#',
-    repositoryUrl: '#',
+    technologies: ['Angular 19', 'TypeScript', 'RxJS', 'SCSS'],
+    repositoryUrl: 'https://github.com/GeorgiNyagolovGit/marketplace-frontend',
     accent: 'violet',
     featured: true,
-  },
-  {
-    title: 'Spendly',
-    description:
-      'Personal finance dashboard for tracking expenses, budgets and monthly trends with clear data visualizations.',
-    category: 'Full Stack',
-    technologies: ['React', 'Node.js', 'Express', 'MongoDB'],
-    liveUrl: '#',
-    repositoryUrl: '#',
-    accent: 'orange',
   },
 ]

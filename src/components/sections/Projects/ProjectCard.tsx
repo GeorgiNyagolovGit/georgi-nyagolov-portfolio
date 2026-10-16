@@ -25,7 +25,7 @@ export const ProjectCard = ({ project, index }: ProjectCardProps) => {
         <p>{project.description}</p>
         <ul>{project.technologies.map((technology) => <li key={technology}>{technology}</li>)}</ul>
         <div className={styles.links}>
-          <a href={project.liveUrl} {...safeLinkProps(project.liveUrl)}>Live demo ↗</a>
+          {project.liveUrl && <a href={project.liveUrl} {...safeLinkProps(project.liveUrl)}>Live demo ↗</a>}
           <a href={project.repositoryUrl} {...safeLinkProps(project.repositoryUrl)}>Source code ↗</a>
         </div>
       </div>
