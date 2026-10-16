@@ -1,0 +1,135 @@
+@use '../../../styles/abstracts/mixins' as *;
+
+.header {
+  left: 0;
+  padding-block: 1.25rem;
+  position: fixed;
+  right: 0;
+  top: 0;
+  transition: background 200ms ease, border-color 200ms ease, padding 200ms ease;
+  z-index: 50;
+}
+
+.scrolled {
+  backdrop-filter: blur(18px);
+  background: color-mix(in srgb, var(--background) 82%, transparent);
+  border-bottom: 1px solid var(--border);
+  padding-block: 0.75rem;
+}
+
+.navbar {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  @include focus-ring;
+  color: var(--text-primary);
+  font: 800 1.25rem/1 var(--font-mono);
+  letter-spacing: -0.05em;
+  text-decoration: none;
+  span {
+    color: var(--accent);
+  }
+}
+
+.nav {
+  align-items: center;
+  display: flex;
+  gap: clamp(1.25rem, 3vw, 2.25rem);
+
+  a {
+    @include focus-ring;
+    color: var(--text-secondary);
+    font-size: 0.86rem;
+    font-weight: 650;
+    text-decoration: none;
+    transition: color 160ms ease;
+    &:hover {
+      color: var(--accent);
+    }
+  }
+}
+
+.current {
+  color: var(--accent) !important;
+}
+
+.actions {
+  align-items: center;
+  display: flex;
+  gap: 0.75rem;
+}
+
+.menuButton {
+  @include focus-ring;
+  align-items: center;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  color: var(--text-primary);
+  cursor: pointer;
+  display: flex;
+  height: 2.5rem;
+  justify-content: center;
+  width: 2.5rem;
+}
+
+.menuButton {
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.menuButton span {
+  background: currentColor;
+  height: 1px;
+  transition: 180ms ease;
+  width: 16px;
+}
+
+@media (max-width: 720px) {
+  .menuButton {
+    display: flex;
+  }
+
+  .nav {
+    align-items: flex-start;
+    background: var(--background);
+    flex-direction: column;
+    gap: 0;
+    inset: 4.5rem 0 0;
+    opacity: 0;
+    padding: 2rem 1.5rem;
+    pointer-events: none;
+    position: fixed;
+    transform: translateY(-1rem);
+    transition: 180ms ease;
+
+    a {
+      border-bottom: 1px solid var(--border);
+      font-size: 1.4rem;
+      padding: 1.15rem 0;
+      width: 100%;
+    }
+  }
+
+  .open {
+    opacity: 1;
+    pointer-events: auto;
+    transform: none;
+  }
+
+  .active span:first-child {
+    transform: translateY(5px) rotate(45deg);
+  }
+
+  .active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .active span:last-child {
+    transform: translateY(-5px) rotate(-45deg);
+  }
+}

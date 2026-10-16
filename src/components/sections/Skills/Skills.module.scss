@@ -1,0 +1,66 @@
+.grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.skillCard {
+  padding: clamp(1.3rem, 3vw, 2rem);
+}
+
+.cardHeading {
+  align-items: center;
+  display: flex;
+  gap: 0.8rem;
+  margin-bottom: 2rem;
+}
+
+.cardHeading > span {
+  align-items: center;
+  background: var(--accent-soft);
+  border: 1px solid color-mix(in srgb, var(--accent) 22%, transparent);
+  border-radius: 0.7rem;
+  color: var(--accent);
+  display: flex;
+  font: 700 0.8rem/1 var(--font-mono);
+  height: 2.5rem;
+  justify-content: center;
+  width: 2.5rem;
+}
+
+.cardHeading h3 {
+  font-size: 1.05rem;
+  margin: 0;
+}
+
+.skillCard ul {
+  display: grid;
+  gap: 1.25rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.skillCard li {
+  border-top: 1px solid var(--border);
+  padding-top: 1rem;
+}
+
+.skillCard h4 {
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  margin: 0 0 0.4rem;
+}
+
+.skillCard li p {
+  color: var(--text-muted);
+  font-size: 0.75rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+@media (max-width: 560px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
