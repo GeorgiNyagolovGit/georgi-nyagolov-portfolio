@@ -7,5 +7,5 @@ export const socials: Social[] = [
     url: 'https://linkedin.com/in/yourusername',
     icon: 'linkedin',
   },
-  { label: 'Email', url: 'mailto:hello@yourname.dev', icon: 'email' },
+  { label: 'Email', url: 'mailto:georginyagolov33@gmail.com', icon: 'email' },
 ]

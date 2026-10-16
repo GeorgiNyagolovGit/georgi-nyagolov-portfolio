@@ -1,8 +1,8 @@
 export const profile = {
   name: 'Georgi Nyagolov',
   role: 'Junior Frontend Developer',
-  location: 'Sofia, Bulgaria',
-  email: 'hello@yourname.dev',
+  location: 'Varna, Bulgaria',
+  email: 'georginyagolov33@gmail.com',
   availability: 'Open to junior opportunities',
   shortBio:
     'I build accessible, responsive web experiences with React and TypeScript — with a focus on clean code, thoughtful UI and continuous learning.',
