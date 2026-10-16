@@ -21,12 +21,13 @@ export const Hero = () => (
       </div>
 
       <div className={styles.visual} aria-hidden="true">
+        <div className={styles.index}>GN / 01</div>
         <div className={styles.orbit}><span /></div>
         <div className={styles.codeCard}>
-          <div className={styles.dots}><i /><i /><i /></div>
-          <pre><code><em>const</em> developer = {'{'}{`\n`}  curious: <b>true</b>,{`\n`}  focused: <b>true</b>,{`\n`}  coffee: <strong>'required'</strong>{`\n`}{'}'}</code></pre>
+          <div className={styles.dots}><i /><i /><i /><small>profile.ts</small></div>
+          <pre><code><em>const</em> georgi = {'{'}{`\n`}  frontend: <b>'React'</b>,{`\n`}  backend: <b>'Spring'</b>,{`\n`}  mindset: <strong>'build → learn'</strong>{`\n`}{'}'}</code></pre>
         </div>
-        <div className={styles.badge}>⚡<span>Fast learner</span></div>
+        <div className={styles.badge}><b>02</b><span>Full-stack<br />perspective</span></div>
       </div>
     </Container>
     <a className={styles.scroll} href="/about" aria-label="Open the about page"><span /> Explore</a>

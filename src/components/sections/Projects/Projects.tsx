@@ -6,7 +6,7 @@ import { ProjectCard } from './ProjectCard'
 import styles from './Projects.module.scss'
 
 type Filter = 'All' | ProjectCategory
-const filters: Filter[] = ['All', 'Frontend', 'Full Stack']
+const filters: Filter[] = ['All', 'Frontend', 'Backend']
 
 export const Projects = () => {
   const [filter, setFilter] = useState<Filter>('All')

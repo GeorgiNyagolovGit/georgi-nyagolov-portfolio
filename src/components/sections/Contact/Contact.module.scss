@@ -4,22 +4,22 @@
 }
 
 .contact::before {
-  background: var(--glow);
-  border-radius: 50%;
-  bottom: -25rem;
+  background: var(--accent);
+  bottom: 3rem;
   content: '';
-  filter: blur(60px);
-  height: 45rem;
-  left: 50%;
+  height: 8rem;
+  left: -4rem;
+  opacity: .18;
   position: absolute;
-  transform: translateX(-50%);
-  width: 45rem;
+  transform: rotate(24deg);
+  width: 24rem;
 }
 
 .box {
   align-items: center;
   border: 1px solid var(--border);
-  border-radius: var(--radius-lg);
+  background: color-mix(in srgb, var(--surface-2) 82%, transparent);
+  box-shadow: 10px 10px 0 color-mix(in srgb, var(--accent) 55%, transparent);
   display: flex;
   flex-direction: column;
   padding: clamp(3rem, 8vw, 6rem) clamp(1.25rem, 5vw, 4rem);
@@ -30,7 +30,7 @@
 
 .box::before,
 .box::after {
-  border-color: var(--accent);
+  border-color: var(--signal);
   border-style: solid;
   content: '';
   height: 24px;
@@ -85,13 +85,14 @@
   color: var(--text-muted);
   font: 600 0.68rem/1 var(--font-mono);
   text-transform: uppercase;
+  letter-spacing: .08em;
 }
 
 .form input,
 .form textarea {
-  background: var(--surface-2);
+  background: var(--background);
   border: 1px solid var(--border);
-  border-radius: 0.65rem;
+  border-radius: .15rem;
   color: var(--text-primary);
   font: inherit;
   outline: none;
@@ -167,7 +168,7 @@
 .socials span {
   align-items: center;
   border: 1px solid var(--border);
-  border-radius: 50%;
+  border-radius: .15rem;
   display: flex;
   font: 700 0.65rem/1 var(--font-mono);
   height: 2rem;

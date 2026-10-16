@@ -1,13 +1,26 @@
 .timeline {
-  max-width: 900px;
+  max-width: 980px;
 }
 
 .timeline article {
+  background: var(--surface-2);
+  border: 1px solid var(--border);
   display: grid;
   gap: 1.5rem;
   grid-template-columns: 3rem 10rem 1fr;
-  min-height: 170px;
+  min-height: 180px;
+  padding: 2rem;
   position: relative;
+}
+
+.timeline article::after {
+  background: var(--signal);
+  bottom: -6px;
+  content: '';
+  height: 6px;
+  left: 16px;
+  position: absolute;
+  right: -6px;
 }
 
 .marker {
@@ -15,7 +28,7 @@
 }
 
 .marker::after {
-  background: var(--border);
+  background: var(--accent);
   content: '';
   height: 100%;
   left: 50%;
@@ -30,10 +43,10 @@
 
 .marker span {
   align-items: center;
-  background: var(--surface-2);
+  background: var(--accent);
   border: 1px solid var(--border-hover);
-  border-radius: 50%;
-  color: var(--accent);
+  border-radius: .15rem;
+  color: #101522;
   display: flex;
   font: 600 0.7rem/1 var(--font-mono);
   height: 2.5rem;
@@ -50,12 +63,12 @@
 }
 
 .timeline h3 {
-  font-size: 1.2rem;
+  font-size: 1.45rem;
   margin: 0 0 0.4rem;
 }
 
 .timeline h4 {
-  color: var(--accent);
+  color: var(--signal);
   font-size: 0.78rem;
   margin: 0 0 0.8rem;
 }

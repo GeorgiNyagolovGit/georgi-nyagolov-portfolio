@@ -1,11 +1,21 @@
 .grid {
   display: grid;
-  gap: 1rem;
+  gap: 1.4rem;
   grid-template-columns: repeat(2, 1fr);
 }
 
 .skillCard {
   padding: clamp(1.3rem, 3vw, 2rem);
+  position: relative;
+}
+
+.skillCard::after {
+  color: rgba(255, 255, 255, .035);
+  content: 'TOOLS';
+  font: 400 5rem/1 var(--font-display);
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
 }
 
 .cardHeading {
@@ -19,13 +29,13 @@
   align-items: center;
   background: var(--accent-soft);
   border: 1px solid color-mix(in srgb, var(--accent) 22%, transparent);
-  border-radius: 0.7rem;
+  border-radius: .15rem;
   color: var(--accent);
   display: flex;
   font: 700 0.8rem/1 var(--font-mono);
-  height: 2.5rem;
+  height: 2.7rem;
   justify-content: center;
-  width: 2.5rem;
+  width: 2.7rem;
 }
 
 .cardHeading h3 {
@@ -43,11 +53,14 @@
 
 .skillCard li {
   border-top: 1px solid var(--border);
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: minmax(90px, .35fr) 1fr;
   padding-top: 1rem;
 }
 
 .skillCard h4 {
-  color: var(--text-secondary);
+  color: var(--text-primary);
   font-size: 0.85rem;
   margin: 0 0 0.4rem;
 }
@@ -62,5 +75,9 @@
 @media (max-width: 560px) {
   .grid {
     grid-template-columns: 1fr;
+  }
+
+  .skillCard li {
+    display: block;
   }
 }

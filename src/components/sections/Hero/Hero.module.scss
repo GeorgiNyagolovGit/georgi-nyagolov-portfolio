@@ -6,15 +6,26 @@
 }
 
 .hero::before {
-  background: var(--glow);
-  border-radius: 50%;
+  background: var(--accent);
   content: '';
-  filter: blur(40px);
-  height: 38rem;
+  height: 1px;
   position: absolute;
-  right: -20rem;
-  top: -15rem;
-  width: 38rem;
+  right: 0;
+  top: 27%;
+  transform: rotate(-12deg);
+  transform-origin: right;
+  width: 43%;
+}
+
+.hero::after {
+  color: rgba(255, 255, 255, .025);
+  content: 'BUILD';
+  font: 400 clamp(10rem, 25vw, 24rem)/1 var(--font-display);
+  left: -1rem;
+  pointer-events: none;
+  position: absolute;
+  top: 48%;
+  transform: translateY(-50%);
 }
 
 .inner {
@@ -36,13 +47,14 @@
   display: flex;
   font: 650 0.78rem/1 var(--font-mono);
   gap: 0.6rem;
-  margin-bottom: 2rem;
+  letter-spacing: .08em;
+  margin-bottom: 2.4rem;
+  text-transform: uppercase;
 }
 
 .availability i {
-  background: var(--accent);
-  border-radius: 50%;
-  box-shadow: 0 0 0 5px color-mix(in srgb, var(--accent) 15%, transparent);
+  background: var(--signal);
+  box-shadow: 0 0 0 5px color-mix(in srgb, var(--signal) 15%, transparent);
   height: 7px;
   width: 7px;
 }
@@ -50,19 +62,24 @@
 .intro {
   color: var(--accent);
   font: 600 clamp(1rem, 2vw, 1.25rem)/1.4 var(--font-mono);
-  margin: 0 0 0.9rem;
+  letter-spacing: .12em;
+  margin: 0 0 1rem;
+  text-transform: uppercase;
 }
 
 .content h1 {
-  font-size: clamp(3.2rem, 7vw, 6.4rem);
-  letter-spacing: -0.065em;
-  line-height: 0.96;
+  font-family: var(--font-display);
+  font-size: clamp(4rem, 9vw, 8rem);
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  line-height: 0.82;
   margin: 0;
   max-width: 850px;
 }
 
 .content h1 span {
-  color: var(--text-muted);
+  color: transparent;
+  -webkit-text-stroke: 1px var(--text-muted);
   display: block;
 }
 
@@ -88,6 +105,7 @@
   gap: 2rem;
   margin-top: 2.5rem;
   padding-top: 1.25rem;
+  letter-spacing: .08em;
   text-transform: uppercase;
 }
 
@@ -96,54 +114,59 @@
   position: relative;
 }
 
+.index {
+  color: var(--signal);
+  font: 700 .68rem/1 var(--font-mono);
+  letter-spacing: .2em;
+  position: absolute;
+  right: .5rem;
+  top: 1rem;
+}
+
 .orbit {
-  border: 1px solid var(--border);
-  border-radius: 50%;
-  height: 380px;
+  border: 1px dashed var(--border-hover);
+  height: 360px;
   left: 50%;
   position: absolute;
   top: 50%;
-  transform: translate(-50%, -50%);
-  width: 380px;
+  transform: translate(-50%, -50%) rotate(8deg);
+  width: 330px;
 }
 
 .orbit::before,
 .orbit::after {
   border: 1px solid var(--border);
-  border-radius: 50%;
   content: '';
   inset: 2.2rem;
   position: absolute;
 }
 
 .orbit::after {
-  inset: 5rem;
+  inset: 5rem 3.5rem;
 }
 
 .orbit span {
-  animation: orbit 7s linear infinite;
-  background: var(--accent);
-  border-radius: 50%;
-  box-shadow: 0 0 18px var(--accent);
-  height: 9px;
-  left: 50%;
+  animation: orbit 5s ease-in-out infinite alternate;
+  background: var(--signal);
+  box-shadow: 0 0 18px var(--signal);
+  height: 8px;
+  left: -4px;
   position: absolute;
-  top: -5px;
-  transform-origin: 0 195px;
-  width: 9px;
+  top: 50%;
+  width: 8px;
 }
 
 .codeCard {
   backdrop-filter: blur(15px);
   background: color-mix(in srgb, var(--surface-2) 86%, transparent);
   border: 1px solid var(--border-hover);
-  border-radius: 1rem;
+  border-radius: .3rem;
   box-shadow: var(--shadow-lg);
   left: 50%;
   padding: 1.1rem;
   position: absolute;
   top: 50%;
-  transform: translate(-50%, -50%) rotate(-3deg);
+  transform: translate(-50%, -50%) rotate(-2deg);
   width: min(100%, 340px);
 }
 
@@ -164,7 +187,13 @@
 }
 
 .dots i:nth-child(3) {
-  background: var(--accent);
+  background: var(--signal);
+}
+
+.dots small {
+  color: var(--text-muted);
+  font: 500 .62rem/1 var(--font-mono);
+  margin-left: auto;
 }
 
 .codeCard pre {
@@ -191,14 +220,19 @@
   align-items: center;
   background: var(--surface-2);
   border: 1px solid var(--border);
-  border-radius: 0.8rem;
+  border-radius: .2rem;
   bottom: 2.4rem;
   display: flex;
   gap: 0.6rem;
   padding: 0.7rem 0.9rem;
   position: absolute;
   right: -0.5rem;
-  transform: rotate(4deg);
+  transform: rotate(3deg);
+}
+
+.badge b {
+  color: var(--accent);
+  font: 800 1.5rem/1 var(--font-mono);
 }
 
 .badge span {
@@ -243,7 +277,7 @@
 
 @keyframes orbit {
   to {
-    transform: rotate(360deg);
+    transform: translateX(322px);
   }
 }
 
