@@ -21,4 +21,14 @@ export const projects: Project[] = [
     accent: 'violet',
     featured: true,
   },
+  {
+    title: 'Job Board Platform',
+    description:
+      'A full-stack job marketplace where candidates can discover roles, save favourites and apply, while employers manage companies, job listings and applications. Includes role-based administration and Google authentication.',
+    category: 'Full Stack',
+    technologies: ['Laravel 13', 'PHP 8.3', 'Vue 3', 'Inertia.js', 'MySQL'],
+    repositoryUrl: 'https://github.com/GeorgiNyagolovGit/job-app-laravel-react',
+    accent: 'orange',
+    featured: true,
+  },
 ]
