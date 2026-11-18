@@ -1,0 +1,63 @@
+.timeline {
+  border-top: 1px solid var(--ink);
+}
+
+.timeline article {
+  border-bottom: 1px solid var(--line);
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 3rem minmax(9rem, 0.35fr) 1fr;
+  padding-block: 2rem;
+}
+
+.marker span {
+  color: var(--muted);
+  font-size: 0.72rem;
+}
+
+.timeline time {
+  color: var(--muted);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  padding-top: 0.3rem;
+}
+
+.timeline h3 {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 3.5vw, 3rem);
+  font-weight: 400;
+  letter-spacing: -0.04em;
+  line-height: 1;
+  margin: 0 0 0.6rem;
+}
+
+.timeline h4 {
+  color: var(--ink);
+  font-size: 0.75rem;
+  margin: 0 0 1rem;
+}
+
+.timeline p {
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.7;
+  margin: 0;
+  max-width: 36rem;
+}
+
+@media (max-width: 700px) {
+  .timeline article {
+    gap: 1rem;
+    grid-template-columns: 2rem 1fr;
+  }
+
+  .timeline time,
+  .timeline article > div:last-child {
+    grid-column: 2;
+  }
+
+  .marker {
+    grid-row: 1 / 3;
+  }
+}

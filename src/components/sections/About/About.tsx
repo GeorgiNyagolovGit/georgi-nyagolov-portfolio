@@ -1,6 +1,6 @@
 import { profile } from '../../../data/profile'
 import { Container } from '../../layout/Container/Container'
-import styles from './About.module.scss'
+import styles from './About.module.css'
 
 const facts = [
   ['01', 'Quality over shortcuts'],

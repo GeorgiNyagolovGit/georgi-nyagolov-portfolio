@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { useScroll } from '../../../hooks/useScroll'
 import { NAV_ITEMS } from '../../../utils/constants'
 import { Container } from '../Container/Container'
-import styles from './Navbar.module.scss'
+import styles from './Navbar.module.css'
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -17,7 +17,7 @@ export const Navbar = () => {
     <header className={`${styles.header} ${hasScrolled ? styles.scrolled : ''}`}>
       <Container className={styles.navbar}>
         <a className={styles.logo} href="/" aria-label="Back to home page">
-          GN<span>.</span>
+          <span className={styles.logoText}>Georgi Nyagolov</span>
         </a>
 
         <nav className={`${styles.nav} ${isOpen ? styles.open : ''}`} aria-label="Primary navigation">
@@ -34,6 +34,7 @@ export const Navbar = () => {
         </nav>
 
         <div className={styles.actions}>
+          <a className={styles.contactLink} href="/contact">Let&apos;s talk <span>↗</span></a>
           <button
             className={`${styles.menuButton} ${isOpen ? styles.active : ''}`}
             type="button"

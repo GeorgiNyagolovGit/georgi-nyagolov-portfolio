@@ -1,0 +1,253 @@
+.header {
+  align-items: end;
+  display: flex;
+  gap: 2rem;
+  justify-content: space-between;
+}
+
+.filters {
+  display: flex;
+  gap: 0.2rem;
+  margin-bottom: clamp(2.5rem, 5vw, 4rem);
+}
+
+.filters button {
+  background: transparent;
+  border: 0;
+  color: var(--muted);
+  cursor: pointer;
+  font-size: 0.72rem;
+  padding: 0.55rem 0.7rem;
+  white-space: nowrap;
+}
+
+.filters button:hover,
+.filters .active {
+  color: var(--blue);
+}
+
+.filters .active {
+  background: var(--acid);
+}
+
+.grid {
+  border-top: 1px solid var(--ink);
+}
+
+.projectCard {
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  display: grid;
+  gap: clamp(2rem, 6vw, 5rem);
+  grid-template-columns: minmax(17rem, 0.9fr) minmax(0, 1.1fr);
+  padding-block: clamp(2.5rem, 6vw, 4.5rem);
+}
+
+.preview {
+  align-items: center;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  display: flex;
+  justify-content: center;
+  min-height: clamp(18rem, 31vw, 24rem);
+  overflow: hidden;
+  position: relative;
+}
+
+.violet {
+  --project-color: #70827b;
+  background: #e7ece9;
+}
+
+.orange {
+  --project-color: #8d7767;
+  background: #eee9e4;
+}
+
+.emerald {
+  --project-color: #315f50;
+  background: #e1ebe6;
+}
+
+.projectNumber {
+  color: var(--muted);
+  font: 700 0.68rem/1 var(--font-mono);
+  left: 1.25rem;
+  position: absolute;
+  top: 1.25rem;
+}
+
+.projectNumber::after {
+  content: " / 03";
+}
+
+.featured {
+  color: var(--muted);
+  font-size: 0.65rem;
+  font-weight: 700;
+  position: absolute;
+  right: 1.25rem;
+  text-transform: uppercase;
+  top: 1.25rem;
+}
+
+.mockup {
+  background: var(--surface);
+  border: 1px solid var(--line-dark);
+  height: clamp(10rem, 18vw, 13rem);
+  position: relative;
+  width: min(72%, 22rem);
+}
+
+.mockupBar {
+  align-items: center;
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  gap: 0.3rem;
+  padding: 0.7rem;
+}
+
+.mockupBar i {
+  background: var(--line);
+  border-radius: 50%;
+  height: 0.4rem;
+  width: 0.4rem;
+}
+
+.mockupBar small {
+  color: var(--muted);
+  font-size: 0.52rem;
+  margin-left: auto;
+}
+
+.mockupBody {
+  display: grid;
+  gap: 0.65rem;
+  grid-template-columns: 1.45fr 0.55fr;
+  padding: clamp(1rem, 2.5vw, 1.5rem);
+}
+
+.mockupBody b {
+  background: var(--project-color);
+  grid-row: span 4;
+}
+
+.mockupBody span {
+  background: var(--paper-deep);
+  height: 1rem;
+}
+
+.mockupBody em {
+  background: var(--line-dark);
+  height: 0.4rem;
+  margin-top: 0.2rem;
+  width: 65%;
+}
+
+.body {
+  align-self: center;
+}
+
+.category {
+  color: var(--blue);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.body h3 {
+  font-family: var(--font-display);
+  font-size: clamp(2.2rem, 4.5vw, 4rem);
+  font-weight: 400;
+  letter-spacing: -0.045em;
+  line-height: 1;
+  margin: 0.8rem 0 1.1rem;
+  max-width: 12ch;
+}
+
+.body p {
+  color: var(--muted);
+  font-size: 0.92rem;
+  line-height: 1.7;
+  margin: 0;
+  max-width: 38rem;
+}
+
+.body ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem 1rem;
+  list-style: none;
+  margin: 1.5rem 0;
+  padding: 0;
+}
+
+.body li {
+  color: var(--muted);
+  font-size: 0.68rem;
+}
+
+.links {
+  display: flex;
+  gap: 1.5rem;
+  padding-top: 0.5rem;
+}
+
+.links a,
+.note a {
+  border-bottom: 1px solid currentColor;
+  color: var(--ink);
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding-bottom: 0.2rem;
+  text-decoration: none;
+}
+
+.links a:hover,
+.note a:hover {
+  color: var(--blue);
+}
+
+.note {
+  color: var(--muted);
+  font-size: 0.78rem;
+  margin: 2rem 0 0;
+  text-align: right;
+}
+
+@media (max-width: 920px) {
+  .header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .header > div:first-child {
+    margin-bottom: 0;
+  }
+
+  .filters {
+    max-width: 100%;
+    overflow-x: auto;
+  }
+
+  .projectCard {
+    grid-template-columns: 1fr;
+  }
+
+  .preview {
+    min-height: 20rem;
+  }
+}
+
+@media (max-width: 520px) {
+  .preview {
+    min-height: 16rem;
+  }
+
+  .mockup {
+    height: 9.5rem;
+    width: 76%;
+  }
+}

@@ -1,6 +1,6 @@
 import { skillGroups } from '../../../data/skills'
 import { Container } from '../../layout/Container/Container'
-import styles from './Skills.module.scss'
+import styles from './Skills.module.css'
 
 export const Skills = () => (
   <section className="section section--alt" id="skills">

@@ -1,5 +1,5 @@
 import { Container } from '../../layout/Container/Container'
-import styles from './Education.module.scss'
+import styles from './Education.module.css'
 
 const timeline = [
   {

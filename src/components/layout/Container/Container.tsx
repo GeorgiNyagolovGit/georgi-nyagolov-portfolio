@@ -1,5 +1,5 @@
 import type { HTMLAttributes, ReactNode } from 'react'
-import styles from './Container.module.scss'
+import styles from './Container.module.css'
 
 interface ContainerProps extends HTMLAttributes<HTMLDivElement> {
   children: ReactNode

@@ -2,7 +2,7 @@ import { useState, type FormEvent } from 'react'
 import { profile } from '../../../data/profile'
 import { socials } from '../../../data/socials'
 import { Container } from '../../layout/Container/Container'
-import styles from './Contact.module.scss'
+import styles from './Contact.module.css'
 
 const icons = { github: 'GH', linkedin: 'in', email: '@' }
 

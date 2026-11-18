@@ -1,12 +1,12 @@
 # Georgi Nyagolov — Developer Portfolio
 
-A responsive personal portfolio for **Georgi Nyagolov**, a junior frontend developer based in Sofia, Bulgaria. The site presents my profile, technical skills, projects, education and contact information in a clean, accessible interface.
+A responsive personal portfolio for **Georgi Nyagolov**, a junior frontend developer based in Varna, Bulgaria. The site presents my profile, technical skills, projects, education and contact information in a bold, accessible editorial interface.
 
 ## Features
 
 - Responsive layout for desktop, tablet and mobile devices
 - Separate pages for Home, About, Skills, Projects, Education and Contact
-- Reusable React components with scoped SCSS Modules
+- Reusable React components with scoped CSS Modules
 - Semantic HTML and a keyboard-accessible “Skip to content” link
 - Custom 404 page for unknown routes
 - Centralized profile, project, skill and social-link data for easy updates
@@ -16,7 +16,7 @@ A responsive personal portfolio for **Georgi Nyagolov**, a junior frontend devel
 - **React 19** — component-based user interface
 - **TypeScript** — type-safe application code
 - **Vite** — development server and production build
-- **SCSS Modules** — locally scoped component styles
+- **CSS Modules** — locally scoped component styles using standard CSS
 - **Oxlint** — fast static analysis
 
 ## Getting started
@@ -55,7 +55,7 @@ src/
 ├── data/         # Profile, projects, skills and social links
 ├── hooks/        # Custom React hooks
 ├── pages/        # Route-level page components
-├── styles/       # Global SCSS foundations and variables
+├── styles/       # Global CSS foundations and design tokens
 ├── types/        # Shared TypeScript types
 └── utils/        # Constants and helper functions
 ```

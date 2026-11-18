@@ -3,10 +3,10 @@ import { projects } from '../../../data/projects'
 import type { ProjectCategory } from '../../../types/Project'
 import { Container } from '../../layout/Container/Container'
 import { ProjectCard } from './ProjectCard'
-import styles from './Projects.module.scss'
+import styles from './Projects.module.css'
 
 type Filter = 'All' | ProjectCategory
-const filters: Filter[] = ['All', 'Frontend', 'Backend']
+const filters: Filter[] = ['All', 'Frontend', 'Backend', 'Full Stack']
 
 export const Projects = () => {
   const [filter, setFilter] = useState<Filter>('All')

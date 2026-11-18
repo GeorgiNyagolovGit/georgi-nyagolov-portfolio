@@ -1,6 +1,6 @@
 import type { Project } from '../../../types/Project'
 import { isPlaceholderLink } from '../../../utils/helpers'
-import styles from './Projects.module.scss'
+import styles from './Projects.module.css'
 
 interface ProjectCardProps { project: Project; index: number }
 
@@ -14,8 +14,8 @@ export const ProjectCard = ({ project, index }: ProjectCardProps) => {
       <div className={`${styles.preview} ${styles[project.accent]}`}>
         <span className={styles.projectNumber}>0{index + 1}</span>
         <div className={styles.mockup}>
-          <div className={styles.mockupBar}><i /><i /><i /></div>
-          <div className={styles.mockupBody}><b /><span /><span /><span /></div>
+          <div className={styles.mockupBar}><i /><i /><i /><small>{project.category}</small></div>
+          <div className={styles.mockupBody}><b /><span /><span /><span /><em /></div>
         </div>
         {project.featured && <span className={styles.featured}>Featured</span>}
       </div>

@@ -16,7 +16,7 @@ export const projects: Project[] = [
     description:
       'A responsive e-commerce storefront with product discovery, authentication, persistent cart, checkout, order history and a dedicated admin workspace.',
     category: 'Frontend',
-    technologies: ['Angular 19', 'TypeScript', 'RxJS', 'SCSS'],
+    technologies: ['Angular 19', 'TypeScript', 'RxJS', 'CSS'],
     repositoryUrl: 'https://github.com/GeorgiNyagolovGit/marketplace-frontend',
     accent: 'violet',
     featured: true,
